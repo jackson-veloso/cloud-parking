@@ -15,6 +15,10 @@
 	<description>Cloud Parking</description>
 	<properties>
 		<java.version>11</java.version>
+		<testcontainers.version>1.15.0</testcontainers.version>
+		<modelmapper.version>3.1.0</modelmapper.version>
+		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+<!--		<rest-assured.version>5.1.1</rest-assured.version>-->
 	</properties>
 	<dependencies>
 		<dependency>
@@ -32,18 +36,18 @@
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
-			<version>3.1.0</version>
+			<version>${modelmapper.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
+			<version>${springfox-swagger2.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.9.2</version>
+			<version>${springfox-swagger2.version}</version>
 		</dependency>
 
 		<dependency>
@@ -55,8 +59,28 @@
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
-<!--			<version>5.1.1</version>-->
+<!--			<version>${rest-assured.version}</version>-->
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${testcontainers.version}</version>
+			<scope>test</scope>
+<!--			<type>pom</type>-->
+<!--			<scope>import</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+<!--			<scope>runtime</scope>-->
 		</dependency>
 
 		<dependency>
