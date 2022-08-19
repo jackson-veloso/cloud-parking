@@ -9,6 +9,7 @@ docker run --name parking-db -p 5432:5432 -e POSTGRES_DB=parking -e POSTGRES_USE
 docker start parking-db  
 docker ps  
 
+
 ## Referência
 https://github.com/sandrogiacom/cloud-parking 
 
